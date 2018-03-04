@@ -11,6 +11,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openstreetmap.josm.JOSMFixture;
 import org.openstreetmap.josm.data.coor.LatLon;
+import org.openstreetmap.josm.tools.Geometry;
 
 /**
  * Unit tests of the {@code Way} class.

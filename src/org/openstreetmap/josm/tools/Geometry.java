@@ -792,6 +792,16 @@ public final class Geometry {
         return result;
     }
 
+    /** Get angles in radians and return it's value in range [0, 180].
+    *
+    * @param angle the angle in radians
+    * @return normalized angle
+    * @since xxx
+    */
+   public static double getNormalizedAngleInDegrees(double angle) {
+       return Math.abs(180 * angle / Math.PI);
+   }
+
     /**
      * Compute the centroid/barycenter of nodes
      * @param nodes Nodes for which the centroid is wanted
