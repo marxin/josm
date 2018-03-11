@@ -33,6 +33,7 @@ import org.openstreetmap.josm.data.preferences.sources.ValidatorPrefHelper;
 import org.openstreetmap.josm.data.validation.tests.Addresses;
 import org.openstreetmap.josm.data.validation.tests.ApiCapabilitiesTest;
 import org.openstreetmap.josm.data.validation.tests.BarriersEntrances;
+import org.openstreetmap.josm.data.validation.tests.BrokenCircleShape;
 import org.openstreetmap.josm.data.validation.tests.Coastlines;
 import org.openstreetmap.josm.data.validation.tests.ConditionalKeys;
 import org.openstreetmap.josm.data.validation.tests.CrossingWays;
@@ -144,6 +145,7 @@ public final class OsmValidator {
         PublicTransportRouteTest.class, // 3600 .. 3699
         RightAngleBuildingTest.class, // 3700 .. 3799
         BuildingOutsideResidentialArea.class, // 3800 .. 3899
+        BrokenCircleShape.class, // 3900 .. 3999
     };
 
     /**
