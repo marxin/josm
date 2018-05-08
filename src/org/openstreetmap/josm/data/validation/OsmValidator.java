@@ -64,6 +64,7 @@ import org.openstreetmap.josm.data.validation.tests.UntaggedNode;
 import org.openstreetmap.josm.data.validation.tests.UntaggedWay;
 import org.openstreetmap.josm.data.validation.tests.WayConnectedToArea;
 import org.openstreetmap.josm.data.validation.tests.WronglyOrderedWays;
+import org.openstreetmap.josm.data.validation.tests.BuildingOutsideResidentialArea;
 import org.openstreetmap.josm.gui.MainApplication;
 import org.openstreetmap.josm.gui.layer.ValidatorLayer;
 import org.openstreetmap.josm.gui.preferences.projection.ProjectionPreference;
@@ -143,6 +144,7 @@ public final class OsmValidator {
         PublicTransportRouteTest.class, // 3600 .. 3699
         RightAngleBuildingTest.class, // 3700 .. 3799
         BuildingSharingPointWith.class, // 3800 .. 3899
+        BuildingOutsideResidentialArea.class, // 3900 .. 3999
     };
 
     /**
