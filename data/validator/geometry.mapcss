@@ -188,6 +188,23 @@ area:closed:areaStyle[landuse!=residential][tag("landuse") = parent_tag("landuse
   throwWarning: tr("Overlapping Identical Landuses");
 }
 
+area:closed[building][building!=no] > node {
+  set node_in_building;
+}
+
+area:closed:areaStyle[landuse=residential][landuse] > node.node_in_building {
+  throwWarning: tr("Building sharing point with a residential area");
+}
+
+way[highway] > node.node_in_building {
+  throwWarning: tr("Building sharing point with a highway");
+}
+
+area:closed[building][building!=no] ⧉
+area:closed[building][building!=no] {
+  throwWarning: tr("Building sharing point with a building");
+}
+
 /* see ticket:#9522 */
 node[tag("amenity") = parent_tag("amenity")] ∈ *[amenity][amenity != parking] {
   throwWarning: tr("{0} inside {1}", concat("amenity=", tag("amenity")), concat("amenity=", tag("amenity")));
